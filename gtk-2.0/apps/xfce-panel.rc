@@ -28,7 +28,7 @@ style "theme-panel" = "dark"
 style "theme-panel-text"
 {
 	fg[NORMAL]	= @base_color
-	fg[PRELIGHT]	= "#ffffff"
+	fg[PRELIGHT]	= "#9ba7a3"
 	fg[ACTIVE]	= @base_color
 	
 	text[NORMAL]	= @base_color
