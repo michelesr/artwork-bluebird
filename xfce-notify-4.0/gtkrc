@@ -1,7 +1,7 @@
 style "notify-window"
 {
     XfceNotifyWindow::summary-bold = 1
-    XfceNotifyWindow::border-color = "#454545"
+    XfceNotifyWindow::border-color = "#ffffff"
     XfceNotifyWindow::border-radius = 10.0
     XfceNotifyWindow::border-width = 0.0
     bg[NORMAL] = "#111"
@@ -11,17 +11,17 @@ style "notify-button"
 {
     bg[NORMAL] = "#202020"
     bg[PRELIGHT] = "#404040"
-    fg[NORMAL] = "#cccccc"
+    fg[NORMAL] = "#ffffff"
     fg[PRELIGHT] = "#ffffff"
     engine "murrine" {
-        roundness = 3
+        roundness = 4
     }
 }
 
 style "notify-text"
 {
-    fg[NORMAL] = "#e0f1df"
-    GtkWidget::link-color = "#999999"
+    fg[NORMAL] = "#ffffff"
+    GtkWidget::link-color = "#a7a7a7"
 }
 
 style "notify-progressbar"
