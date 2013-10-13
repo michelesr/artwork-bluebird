@@ -5,9 +5,10 @@ PanelWidget,
 PanelApplet,
 PanelToplevel {
     padding: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 }
@@ -18,9 +19,10 @@ PanelApplet {
 
 PanelSeparator {
     border-width: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 }
@@ -33,17 +35,19 @@ PanelMenuBar.menubar.menuitem {
     -PanelMenuBar-icon-visible: true;
 
     border-width: 0;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 }
 
 PanelAppletFrame {
     border-width: 0;
-    background-color: @panel_bg_color; 
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-color: @panel_bg_color;
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 }
 
 PanelApplet .button {
@@ -52,9 +56,10 @@ PanelApplet .button {
     border-width: 0 1px;
     border-radius: 0;
     border-color: transparent;
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.5)),
-                                     to (shade(@panel_bg_color, 1.05)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.5),
+                                      shade(@panel_bg_color, 1.05)
+                                      );
 
     color: @panel_fg_color;
 
@@ -66,27 +71,30 @@ PanelApplet .button:active {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 0.85)),
-                                     to (shade(@panel_bg_color, 1.0)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 0.85),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
 }
 
 PanelApplet .button:prelight {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 1.7)),
-                                     to (shade(@panel_bg_color, 1.25)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 1.7),
+                                      shade(@panel_bg_color, 1.25)
+                                      );
 }
 
 PanelApplet .button:active:prelight {
     border-width: 0 1px;
     border-radius: 0;
     border-color: shade(@panel_bg_color, 0.7);
-    background-image: -gtk-gradient(linear, left top, left bottom,
-                                     from (shade(@panel_bg_color, 0.85)),
-                                     to (shade(@panel_bg_color, 1.0)));
+    background-image: linear-gradient(to bottom,
+                                      shade(@panel_bg_color, 0.85),
+                                      shade(@panel_bg_color, 1.0)
+                                      );
 }
 
 WnckPager, WnckTasklist {
@@ -101,19 +109,15 @@ WnckPager, WnckTasklist {
 }
 
 .nautilus-desktop.nautilus-canvas-item {
-    color: #fff;
-    text-shadow: 1px 1px #000;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
-    background-color: alpha(@theme_bg_color, 0.8);
-    background-image: none;
     color: @theme_fg_color;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
-    background-color: alpha(@theme_selected_bg_color, 0.8);
-    background-image: none;
     color: @theme_selected_fg_color;
 }
 
@@ -123,92 +127,70 @@ WnckPager, WnckTasklist {
     text-shadow: none;
 }
 
-NautilusWindow .sidebar .frame {
-    border-width: 1px 0 0 0;
+NautilusWindow .toolbar {
+    border-width: 0 0 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
-    border-radius: 0;
+    border-color: shade(@toolbar_bg_color, 0.8);
 }
 
-NautilusWindow > GtkGrid > .pane-separator {
-    border-width: 1px 1px 0 0;
+NautilusWindow .sidebar .frame {
+    border-style: none;
+}
+
+NautilusWindow > GtkGrid > .pane-separator,
+NautilusWindow > GtkGrid > .pane-separator:hover {
+    border-width: 0 1px 0 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
-NautilusView.frame,
 NautilusNotebook.notebook {
     border-right-width: 0;
-    border-bottom-width: 0;
     border-left-width: 0;
+    border-bottom-width: 0;
 }
 
 NautilusNotebook .frame {
-    border-width: 1px 0 0 0;
+    border-width: 0;
 }
 
 NautilusQueryEditor .primary-toolbar.toolbar {
-    padding: 4px;
-    border-top-width: 1px;
+    border-top-width: 0;
     border-bottom-width: 0;
 }
 
-NautilusQueryEditor .primary-toolbar.toolbar .button {
-    padding: 0;
-}
-
 NautilusQueryEditor .toolbar {
-    padding: 4px 4px 3px 4px;
+    padding-top: 3px;
+    padding-bottom: 2px;
     border-width: 1px 0 0 0;
     border-style: solid;
-    border-color: @theme_bg_color;
-    background-color: mix(@theme_bg_color, @theme_base_color, 0.5);
+    border-color: @toolbar_bg_color;
+    background-color: shade(@toolbar_bg_color, 0.9);
 }
 
 NautilusQueryEditor .toolbar:nth-child(2) {
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@toolbar_bg_color, 0.8);
 }
 
-NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar {
-    border-top-width: 0;
-}
-
-NautilusNotebook.notebook NautilusQueryEditor .toolbar:last-child,
-NautilusNotebook.notebook NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
     border-bottom-width: 1px;
-    border-bottom-color: shade(@theme_bg_color, 0.8);
-}
-
-.toolbar NautilusPathBar .button {
-    padding: 1px 5px;
+    border-bottom-color: shade(@toolbar_bg_color, 0.8);
 }
 
 /******************
  * gnome terminal *
  ******************/
-TerminalScreen {
-    -TerminalScreen-background-darkness: 0.9;
-
-    background-color: @theme_bg_color;
-    color: @theme_fg_color;
+VteTerminal {
+    background-color: @theme_base_color;
+    color: @theme_text_color;
 }
 
 TerminalWindow GtkNotebook.notebook {
     border-right-width: 0;
     border-bottom-width: 0;
     border-left-width: 0;
-}
-
-TerminalWindow .scrollbars-junction,
-TerminalWindow .scrollbar.trough {
-    background-color: @theme_bg_color;
-}
-
-TerminalWindow .scrollbar.button,
-TerminalWindow .scrollbar.button:active,
-TerminalWindow .scrollbar.button:active:hover {
-    color: shade(#333, 0.6);
 }
 
 /*********
@@ -218,13 +200,18 @@ GeditWindow .pane-separator,
 GeditWindow .pane-separator:hover {
     border-width: 0 1px 1px 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.9);
-    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
-    color: mix(@theme_text_color, @theme_base_color, 0.3);
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: @theme_bg_color;
+    color: shade(@theme_bg_color, 0.8);
 }
 
 GeditPanel.title GtkLabel {
     padding: 5px 0;
+}
+
+GeditPanel.vertical .title {
+    padding: 5px 0 4px 3px;
+    border-style: none;
 }
 
 GeditPanel .toolbar {
@@ -233,12 +220,17 @@ GeditPanel .toolbar {
 }
 
 GeditDocumentsPanel .view {
-    background-color: shade(@theme_bg_color, 1.02);
+    background-color: mix(shade(@theme_base_color, 0.9), shade(@theme_selected_bg_color, 1.35), 0.1);
 }
 
-GeditPanel .notebook {
+GeditPanel.vertical .notebook {
     padding: 0;
     border-width: 1px 0;
+}
+
+GeditPanel.horizontal .notebook {
+    padding: 0;
+    border-width: 0 1px 1px 0;
 }
 
 GeditWindow .notebook {
@@ -250,15 +242,66 @@ GeditWindow .notebook tab {
     border-width: 0;
 }
 
-GeditFloatingSlider .not-found {
+GeditStatusComboBox .button,
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    padding: 1px 6px 2px 4px;
+    border-style: solid;
+    border-width: 0 1px;
+    border-radius: 0;
+}
+
+GeditStatusComboBox .button:hover,
+GeditStatusComboBox .button:active,
+GeditStatusComboBox .button:active:hover {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+GeditViewFrame .gedit-search-slider {
+    padding: 4px;
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: shade(@theme_base_color, 0.8);
+    background-color: @theme_base_color;
+}
+
+GeditViewFrame .gedit-search-slider .not-found {
     background-color: @error_bg_color;
     background-image: none;
     color: @error_fg_color;
 }
 
-/***********************
- * gnome control center *
- ***********************/
-CcShellItemView.view {
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+GeditFileBrowserWidget .primary-toolbar.toolbar  {
+    padding: 2px;
+    border-top: none;
     background-color: @theme_bg_color;
+    background-image: none;
+}
+
+/***************
+ * font-viewer *
+ ***************/
+SushiFontWidget {
+    padding: 6px 12px;
+}
+
+/*************
+ * gucharmap *
+ *************/
+GucharmapChartable {
+    background-color: @theme_base_color;
+}
+
+GucharmapChartable:active,
+GucharmapChartable:focus,
+GucharmapChartable:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
 }

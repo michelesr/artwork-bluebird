@@ -1,15 +1,16 @@
-# Author: Simon Steinbeiß
-# Theme: Greybird
+# Author: Philip Müller <philm@manjaro.org>
+# Author of original greybird theme: Simon Steinbeiß <simon.steinbeiss@elfenbeinturm.at>
+# Theme: Greenbird
 # based on "Bluebird" by Simon Steinbeiß and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk_color_scheme	= "bg_color:#CECECE\nselected_bg_color:#9bc264\nbase_color:#fcfcfc" # Background, base.
-gtk_color_scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#000000" # Foreground, text. 
-gtk_color_scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
-gtk_color_scheme	= "link_color:#1b983b" # Hyperlinks
-gtk_color_scheme	= "panel_bg:#686868" # Panel bg color
-gtk_color_scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
-gtk_color_scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
+gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#9bc264\nbase_color:#fcfcfc" # Background, base.
+gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#212121" # Foreground, text. 
+gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
+gtk-color-scheme	= "link_color:#1b983b" # Hyperlinks
+gtk-color-scheme	= "panel_bg:#686868" # Panel bg color
+gtk-color-scheme	= "fm_color:#F7F7F7" # Color used in Nautilus and Thunar.
+gtk-color-scheme	= "bg_color_dark:#686868\ntext_color_dark:#FFF"
 
 gtk-icon-sizes          = "panel-applications-menu=24,24:panel-menu=24,24:panel=16,16:gtk-button=16,16"
 gtk-button-images	= 0					# Disables icons for buttons with text
@@ -431,18 +432,19 @@ style "scrollbar"
 	GtkScrollbar::arrow-scaling	= 0.0
 	
 	bg[NORMAL]	= @bg_color
-	bg[SELECTED]	= shade (0.90, @bg_color)
+	
 	bg[ACTIVE]	= shade (1.75, @base_color)
 	bg[PRELIGHT]	= shade (0.8, @bg_color)
 	bg[INSENSITIVE]	= shade (0.75, @bg_color)
 
 	engine "murrine"
 	{
+		colorize_scrollbar	= FALSE
 		roundness	= 10
 		border_shades	= {0.75, 0.75}
 		trough_shades	= {1.1, 1.3}
 		contrast	= 0.05
-		gradient_shades	= {1.2,1.2,1.15,1.15}
+		gradient_shades	= {1.06,1.06,1.04,1.04}
 	}
 }
 
@@ -450,6 +452,13 @@ style "hscrollbar" {
 }
 
 style "vscrollbar" {
+}
+
+style "overlay-scrollbar"
+{
+	bg[SELECTED] = shade (1.0, @selected_bg_color)
+	bg[INSENSITIVE] = shade (0.85, @bg_color)
+	bg[ACTIVE] = shade (0.6, @bg_color)
 }
 
 style "statusbar"
@@ -636,13 +645,6 @@ style "calendar"
 	fg[PRELIGHT]	= "#FFFFFF"
 	bg[NORMAL]	= shade (0.6, @bg_color_dark)
 	bg[PRELIGHT]	= shade (0.8, @selected_bg_color)
-}
-
-style "overlay-scrollbar"
-{
-	bg[SELECTED] = shade (1.0, @selected_bg_color)
-	bg[INSENSITIVE] = shade (0.85, @bg_color)
-	bg[ACTIVE] = shade (0.6, @bg_color)
 }
 
 ###############################################################################
