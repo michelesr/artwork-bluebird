@@ -442,7 +442,7 @@ style "scrollbar"
 		colorize_scrollbar	= FALSE
 		roundness	= 10
 		border_shades	= {0.75, 0.75}
-		trough_shades	= {1.1, 1.3}
+		trough_shades	= {0.98,0.98}
 		contrast	= 0.05
 		gradient_shades	= {1.06,1.06,1.04,1.04}
 	}
