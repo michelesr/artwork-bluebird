@@ -7,7 +7,7 @@
 
 _pkgname=artwork-bluebird
 pkgname=xfce-theme-bluebird-git
-pkgver=17.20131013~7~g3193f52
+pkgver=18.20131013~8~g3a30415
 pkgrel=1
 pkgdesc="Desktop theme for Xfce based on Greenbird by Manjaro"
 arch=('any')
@@ -40,6 +40,7 @@ package() {
 
   # clean up
   rm -rf {.git,.gitignore,LICENSE.{CC,GPL},README,xfwm4_compact}
+  rm -rf arch
 
   # install theme
   cp -r . $pkgdir/usr/share/themes/Bluebird/
