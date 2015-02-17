@@ -7,7 +7,7 @@
 
 _pkgname=artwork-bluebird
 pkgname=xfce-theme-bluebird-git
-pkgver=16.20131013~6~g503074c
+pkgver=17.20131013~7~g3193f52
 pkgrel=1
 pkgdesc="Desktop theme for Xfce based on Greenbird by Manjaro"
 arch=('any')
