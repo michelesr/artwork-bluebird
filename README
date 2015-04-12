@@ -1,14 +1,15 @@
 Name: Greenbird
 Summary: Desktop Suite for Xfce.
-URL: http://git.manjaro.org/artwork/greenbird-theme
+URL: http://shimmerproject.org/projects/greybird/
 
-Copyright 2013 - 2014 Manjaro (based on Greybird by Simon Steinbeiß and Satyajit Sahoo)
-Greybird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
+Copyright 2013-2015 Manjaro Artwork Team
+Copyright 2009–2012 Simon Steinbeiß and Satyajit Sahoo
+Greenbird is dual-licensed as GPLv2 or later and CC-BY-SA 3.0 or later.
 
 Desktop Suite for Xfce.
-Greybird is the default theme in Xubuntu 11.04 onwards.
+Greenbird is the default theme in Manjaro XFCE.
 
-The Greybird desktop suite includes:
+The Greenbird desktop suite includes:
 – GTK2 theme
 – GTK3 theme
 – Xfwm4 themes (normal and compact)
