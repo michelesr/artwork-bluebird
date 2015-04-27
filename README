@@ -1,6 +1,8 @@
-Name: Greenbird
+Name: Bluebird
 Summary: Desktop Suite for Xfce.
-URL: https://github.com/manjaro/artwork-greenbird
+URL: https://github.com/michelesr/artwork-bluebird
+
+Fork of Greenbird Theme from Manjaro Team
 
 Copyright 2013-2015 Manjaro Artwork Team
 Copyright 2009–2012 Simon Steinbeiß and Satyajit Sahoo
