@@ -3,8 +3,8 @@
 # based on "Bluebird" and "Greybird" by Simon Steinbeiß, Satyajit Sahoo and Pasi Lallinaho
 # Description: As is the original theme, this theme is 100% free and open source.
 
-gtk-color-scheme	= "bg_color:#CECECE\nselected_bg_color:#9bc264\nbase_color:#fcfcfc" # Background, base.
-gtk-color-scheme	= "fg_color:#3C3C3C\nselected_fg_color:#ffffff\ntext_color:#212121" # Foreground, text. 
+gtk-color-scheme	= "bg_color:#ddddddnselected_bg_color:#0084ff\nbase_color:#fcfcfc" # Background, base.
+gtk-color-scheme	= "fg_color:#222222\nselected_fg_color:#ffffff\ntext_color:#212121" # Foreground, text. 
 gtk-color-scheme	= "tooltip_bg_color:#000000\ntooltip_fg_color:#E1E1E1" # Tooltips.
 gtk-color-scheme	= "link_color:#1b983b" # Hyperlinks
 gtk-color-scheme	= "panel_bg:#686868" # Panel bg color
